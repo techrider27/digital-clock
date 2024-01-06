@@ -1,4 +1,4 @@
-clock = () => {
+const clock = () => {
   let date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
@@ -10,10 +10,9 @@ clock = () => {
   }
 
   // 12 hr format
-  if (hours == 0) {
+  if (hours === 0) {
     hours = 12;
-  }
-  if (hours > 12) {
+  } else if (hours > 12) {
     hours = hours - 12;
   }
 

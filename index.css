@@ -9,7 +9,6 @@ body {
 
 .heading {
   width: 100%;
-  height: 50px;
   padding: 0 0 6px 0;
   background-color: blueviolet;
   position: relative;
@@ -27,7 +26,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 622px;
+  height:100vh;
   background-color: black;
 }
 
@@ -76,7 +75,6 @@ body {
   color: gold;
   font-weight: bolder;
   font-size: 20px;
-  height: 33px;
   padding: 5px;
   text-align: center;
 }
@@ -96,7 +94,6 @@ body {
   .container {
     display: flex;
     flex-direction: column;
-    height: 545px;
   }
 
   .hours,
