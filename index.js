@@ -1,32 +1,22 @@
 const clock = () => {
-  let date = new Date();
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-  let seconds = date.getSeconds();
-  let ampm = "AM";
+  // since all the variables are in let we can use commmas
+  let date = new Date(),
+    hours = date.getHours(),
+    minutes = date.getMinutes(),
+    seconds = date.getSeconds(),
+    ampm;
+
   // am pm
-  if (hours > 12) {
-    ampm = "PM";
-  }
+  ampm = hours > 12 ? "PM" : "AM";
 
   // 12 hr format
-  if (hours === 0) {
-    hours = 12;
-  } else if (hours > 12) {
-    hours = hours - 12;
-  }
+  hours = hours === 0 ? 12 : hours > 12 ? hours - 12 : hours;
 
   // 00:00:00
-  if (hours < 10) {
-    hours = "0" + hours;
-  }
+  hours = hours < 10 ? "0" + hours : hours;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
 
-  if (minutes < 10) {
-    minutes = "0" + minutes;
-  }
-  if (seconds < 10) {
-    seconds = "0" + seconds;
-  }
   document.getElementById("hours").innerHTML = hours;
   document.getElementById("minutes").innerHTML = minutes;
   document.getElementById("seconds").innerHTML = seconds;
